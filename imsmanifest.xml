@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="CURSO-GAMIFICACION-V1" version="1.1" xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+    
+    <metadata>
+        <schema>ADL SCORM</schema>
+        <schemaversion>1.2</schemaversion>
+        <lom xmlns="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1">
+            <general>
+                <title>
+                    <langstring xml:lang="es">Curso: Gamificación en el eLearning</langstring>
+                </title>
+            </general>
+        </lom>
+    </metadata>
+
+    <organizations default="ORG-GAMIFICACION">
+        <organization identifier="ORG-GAMIFICACION">
+            <title>Gamificación en el eLearning</title>
+            
+            <item identifier="ITEM-MOD1" identifierref="RES-MOD1" isvisible="true">
+                <title>1. ¿Qué es la Gamificación?</title>
+            </item>
+
+            <item identifier="ITEM-MOD2" identifierref="RES-MOD2" isvisible="true">
+                <title>2. Elementos Clave</title>
+            </item>
+
+            <item identifier="ITEM-MOD3" identifierref="RES-MOD3" isvisible="true">
+                <title>3. Aplicaciones Prácticas</title>
+            </item>
+
+            <item identifier="ITEM-ASSESSMENT" identifierref="RES-ASSESSMENT" isvisible="true">
+                <title>4. Evaluación Rápida</title>
+                <adlcp:masteryscore>80</adlcp:masteryscore>
+            </item>
+        </organization>
+    </organizations>
+
+    <resources>
+        <resource identifier="RES-SHARED" type="webcontent" adlcp:scormtype="asset">
+            <file href="scormdriver.js"/>
+            <file href="scorm-api.js"/>
+            <file href="assets/css/main.css"/>
+        </resource>
+        
+        <resource identifier="RES-MOD1" type="webcontent" adlcp:scormtype="sco" href="content/module1/index.html">
+            <dependency identifierref="RES-SHARED"/>
+            <file href="content/module1/index.html"/>
+            <file href="content/module1/script.js"/>
+        </resource>
+
+        <resource identifier="RES-MOD2" type="webcontent" adlcp:scormtype="sco" href="content/module2/index.html">
+            <dependency identifierref="RES-SHARED"/>
+            <file href="content/module2/index.html"/>
+            <file href="content/module2/script.js"/>
+        </resource>
+
+        <resource identifier="RES-MOD3" type="webcontent" adlcp:scormtype="sco" href="content/module3/index.html">
+            <dependency identifierref="RES-SHARED"/>
+            <file href="content/module3/index.html"/>
+            <file href="content/module3/script.js"/>
+        </resource>
+
+        <resource identifier="RES-ASSESSMENT" type="webcontent" adlcp:scormtype="sco" href="content/assessment/index.html">
+            <dependency identifierref="RES-SHARED"/>
+            <file href="content/assessment/index.html"/>
+            <file href="content/assessment/quiz.js"/>
+        </resource>
+    </resources>
+</manifest>

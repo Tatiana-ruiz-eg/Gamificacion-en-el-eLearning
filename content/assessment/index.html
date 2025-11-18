@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>3. Evaluación Rápida</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Evaluación Rápida</h1>
+        <p>Responde las siguientes preguntas para comprobar tu conocimiento.</p>
+        <form id="quizForm">
+            <div class="question">
+                <p><strong>1. ¿Cuál es el objetivo principal de la gamificación?</strong></p>
+                <label><input type="radio" name="q1" value="a"> Crear un videojuego completo.</label><br>
+                <label><input type="radio" name="q1" value="b"> Aumentar la motivación y el engagement.</label><br>
+                <label><input type="radio" name="q1" value="c"> Evaluar únicamente con exámenes.</label>
+            </div>
+            <div class="question">
+                <p><strong>2. ¿Cuál de los siguientes es un elemento de gamificación?</strong></p>
+                <label><input type="radio" name="q2" value="a"> Un documento PDF largo.</label><br>
+                <label><input type="radio" name="q2" value="b"> Un video de una hora.</label><br>
+                <label><input type="radio" name="q2" value="c"> Insignias por logros.</label>
+            </div>
+            <button type="submit">Calificar y Enviar</button>
+        </form>
+        <div id="result" class="result" style="display:none;"></div>
+    </div>
+    <script src="../../scormdriver.js"></script>
+    <script src="../../scorm-api.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>
